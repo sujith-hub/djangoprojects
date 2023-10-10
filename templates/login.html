@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login page</title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <body>
+    <div class='container'>
+      <h4>Login Page</h4>
+      <form method='POST'>
+        {% csrf_token %}
+        <label>Username:</label>
+        <input type='text' name='username' class='form-control'>
+        <label>Password:</label>
+        <input type='text' name='password' class='form-control' hidden>
+        <input type='submit' name='login' class='btn btn-outline-success'>
+        <input type='reset' name='clear' class='btn btn-outline-danger'>
+      </form>
+    <div>
+  </body>
+</html>
